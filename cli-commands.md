@@ -143,9 +143,12 @@ aws ce get-anomaly-subscriptions \
 
 ## Step 5: Demonstrate Frequency Update
 
+> Note: `ec2-daily-digest` was already deleted during cleanup by the time Step 5 was executed.
+> The update was demonstrated against the pre-existing `Default-Services-Subscription` and reverted immediately.
+
 ```bash
 SUBSCRIPTION_ARN=$(aws ce get-anomaly-subscriptions \
-  --query 'AnomalySubscriptions[?SubscriptionName==`ec2-daily-digest`].SubscriptionArn' \
+  --query 'AnomalySubscriptions[?SubscriptionName==`Default-Services-Subscription`].SubscriptionArn' \
   --output text)
 echo "Subscription ARN: $SUBSCRIPTION_ARN"
 

@@ -59,6 +59,12 @@ AWS enforces that `DAILY` and `WEEKLY` subscriptions can only use direct email a
 ![Subscriptions verified via CLI](screenshots/06-anomaly-subscriptions-verified-cli.png)
 ![Console — Alert subscriptions tab](screenshots/08-console-alert-subscriptions.png)
 
+## Frequency Update Demo
+
+Demonstrated `update-anomaly-subscription` by switching `Default-Services-Subscription` from DAILY → WEEKLY → DAILY. The `ec2-daily-digest` subscription had already been removed during cleanup before this step was executed.
+
+![Frequency update WEEKLY then back to DAILY](screenshots/10-subscription-frequency-update-weekly-daily.png)
+
 ## SNS Subscription Confirmed
 
 ![SNS subscription email received](screenshots/01-sns-subscription-email-received.png)
